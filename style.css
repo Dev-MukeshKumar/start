@@ -1,0 +1,247 @@
+* {
+  font-family: sans-serif;
+}
+h1 {
+  color: blueviolet;
+  /* color: aliceblue; */
+  text-align: center;
+}
+
+nav {
+  background-color: blueviolet;
+  text-align: right;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.circle-img {
+  margin: 0px 30px;
+  border-radius: 50%;
+  box-shadow: 8px 8px 10px grey;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+  padding: 0px 350px;
+  margin: 150px 0px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 5px;
+  background-color: grey;
+}
+
+#box1 {
+  animation-name: fadeMe;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#box2 {
+  animation-name: rotation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  border-radius: 30%;
+  background-image: radial-gradient(
+    circle,
+    yellow,
+    pink,
+    purple,
+    red,
+    pink,
+    yellow
+  );
+}
+
+#box3 {
+  animation: getBigger 2s infinite ease-in-out;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, red, pink, yellow, pink, red);
+}
+
+#box4 {
+  animation: changeColor 7s infinite ease-in-out;
+}
+
+#box5 {
+  position: relative;
+  animation: moveBox 8s ease-in-out infinite;
+}
+
+#box6 {
+  /* background-image: radial-gradient(circle,yellow,pink,purple,red,pink, yellow ); */
+  border-radius: 100%;
+  animation: changeColor 5s ease-in-out infinite,
+    getBigger 6s ease-in-out infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes getBigger {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes fadeMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: grey;
+  }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: yellowgreen;
+  }
+  100% {
+    background-color: grey;
+  }
+}
+
+@keyframes moveBox {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: -212px;
+    top: 0px;
+  }
+  50% {
+    left: -212px;
+    top: 212px;
+  }
+  75% {
+    left: 0px;
+    top: 212px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* form input, textarea, button {
+    display: block;
+    margin: 30px;
+} */
+
+.content-box {
+  margin: 3em;
+  text-align: center;
+}
+
+.bv-color {
+  background-color: blueviolet;
+}
+
+.bv-color:hover {
+  background-color: rgb(164, 73, 248);
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, [col] 1fr);
+  grid-template-rows: repeat(3, [row] auto);
+  background-color: #444;
+  margin: 30px;
+}
+
+.Box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  z-index: 10;
+}
+
+.grid-center-items {
+  display: flex;
+  justify-content: center;
+}
+
+.a {
+  grid-column: col / span 1;
+  grid-row: row;
+}
+.b {
+  grid-column: col 5 / span 1;
+  grid-row: row;
+}
+.c {
+  grid-column: col 2/span 1;
+  grid-row: row 2;
+}
+.d {
+  grid-column: col 1 / span 1;
+  grid-row: row 3;
+}
+
+.e {
+  grid-column: col 5 / span 1;
+  grid-row: row 3;
+}
+
+.f {
+  grid-column: col 4 / span 1;
+  grid-row: row 2;
+  background-color: rgba(49, 121, 207, 0.5);
+  z-index: 20;
+}
+
+.grid-image {
+    height: 100px;
+}
